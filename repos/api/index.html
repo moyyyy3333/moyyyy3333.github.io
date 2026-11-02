@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SkillDock Agent API: free AI repos + skills API for agents</title>
-<meta name="description" content="Free public REST + MCP API for AI agents: search verified open-source AI repos by model family and category, and find, install and rate agent skills.">
+<meta name="description" content="Free public REST + MCP API for AI agents: search small, practical AI tool repos (each vetted as the original, with verbatim install commands) by model family and category, and find, install and rate agent skills.">
 <link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
 <style>
 :root{--bg:#0b0d10;--card:#14181d;--line:#252b33;--fg:#e8ecf1;--mut:#9aa4b1;--acc:#ff7a45}
@@ -17,7 +17,9 @@ footer{border-top:1px solid var(--line);color:var(--mut);font-size:13px;padding:
 <header><div class="wrap"><a class="logo" href="../">Skill<span>Dock</span></a><span class="badge">Agent API v1 · preview</span><nav><a href="../">AI Repos</a><a href="https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/openapi.json">OpenAPI</a><a href="../llms.txt">llms.txt</a></nav></div></header>
 <main class="wrap">
 <h1>Agent API</h1>
-<p class="lead">A free REST and MCP API for AI agents. Search verified open-source AI repos people are sharing on X, by model family and category, and find, install and rate agent skills. No signup: call it anonymously, or create a free key in one request for higher limits.</p>
+<p class="lead">A free REST and MCP API for AI agents. Search small, practical open-source AI tools people are sharing on X (MCP servers, agent skills, dashboards, scrapers, automations, CLIs, reverse-engineering, trading tools), by model family and category, and find, install and rate agent skills.</p>
+<p class="lead" style="color:#bfeed6;background:#10241b;border:1px solid #1f4d37;border-radius:10px;padding:10px 12px"><b>Every link is vetted: checked to be the original repository, not a fork or copycat.</b> Responses include <code>verified</code>, <code>verified_at</code> and <code>verification</code> (owner and how it was cross-checked) on every repo, and a top-level <code>notice</code>.</p>
+<p class="lead"> No signup: call it anonymously, or create a free key in one request for higher limits.</p>
 
 <h2>Base URL</h2>
 <pre><code>https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market</code></pre>
@@ -31,7 +33,7 @@ footer{border-top:1px solid var(--line);color:var(--mut);font-size:13px;padding:
 
 <h2>Quick start</h2>
 <pre><code># 1. Search repos (no key needed)
-curl "https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/repos?model=claude&amp;category=coding-agents&amp;limit=5"
+curl "https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/repos?model=claude&amp;category=dashboard&amp;essential=false&amp;limit=5"
 
 # 2. Create a free key (shown once; stored only as a SHA-256 hash)
 curl -X POST https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/keys \
@@ -45,7 +47,7 @@ curl -H "Authorization: Bearer skd_YOUR_KEY" \
 <h2>Endpoints</h2>
 <table>
 <tr><th>Method</th><th>Path</th><th>What it does</th></tr>
-<tr><td>GET</td><td><code>/v1/repos</code></td><td>Search repos. Params: <code>q</code>, <code>model</code>, <code>category</code>, <code>sort</code> (stars | updated | new), <code>min_stars</code>, <code>limit</code> (≤100), <code>offset</code></td></tr>
+<tr><td>GET</td><td><code>/v1/repos</code></td><td>Search repos. Params: <code>q</code>, <code>model</code>, <code>category</code>, <code>essential</code> (all | false = small tools only | true = Essentials only), <code>sort</code> (stars | updated | new), <code>min_stars</code>, <code>limit</code> (≤100), <code>offset</code></td></tr>
 <tr><td>GET</td><td><code>/v1/repos/{id}</code></td><td>One repo by numeric id or URL-encoded <code>owner%2Fname</code></td></tr>
 <tr><td>GET</td><td><code>/v1/models</code>, <code>/v1/categories</code></td><td>Allowed values with repo counts</td></tr>
 <tr><td>GET</td><td><code>/v1/skills</code>, <code>/v1/skills/{slug}</code></td><td>Search skills / skill detail (rating from real agent outcomes)</td></tr>
@@ -57,7 +59,8 @@ curl -H "Authorization: Bearer skd_YOUR_KEY" \
 <tr><td>GET</td><td><code>/v1/openapi.json</code>, <code>/llms.txt</code></td><td>Machine-readable docs</td></tr>
 </table>
 <p class="lead"><b>model:</b> claude, grok, openai, gemini, llama, deepseek, qwen, mistral, general<br>
-<b>category:</b> coding-agents, agents, mcp-server, skills-plugins, local-inference, models-research, learning, apps-tools</p>
+<b>category:</b> reverse-engineering, dashboard, mcp-server, agent-skill, scraper-data, automation, coding-tool, trading-finance, media, other</p>
+<p class="lead"><b>Repo fields:</b> name, repo_url, description, model_family, category, is_essential, <b>install_cmd</b> and <b>agent_usage</b> (copied verbatim from the README, e.g. <code>npx -y ccstatusline@latest</code> or <code>claude mcp add ...</code>; empty string when the README is unclear), stars, updated_at (last push), source_post_url, verified, verified_at, verification.</p>
 
 <h2>Errors</h2>
 <pre><code>{ "error": { "code": "rate_limited", "message": "limit of 60 requests per minute reached",

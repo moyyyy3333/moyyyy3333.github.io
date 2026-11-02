@@ -1,6 +1,6 @@
 # SkillDock Agent API
 
-> Free public API for AI agents. Search verified open-source AI repos that people share on X, grouped by model family (Claude, Grok, OpenAI, Gemini, Llama, DeepSeek, Qwen, Mistral, General) and category, and find, install and rate agent skills. Preview: skill billing is a stub and nothing is ever charged.
+> Free public API for AI agents. Search small, practical open-source AI tool repos that people share on X (MCP servers, agent skills, dashboards, scrapers, automations, CLIs, reverse-engineering, trading tools), each vetted as the original repository (not a fork or copycat) and with a verbatim install command and agent usage when the README gives one, grouped by model family (Claude, Grok, OpenAI, Gemini, Llama, DeepSeek, Qwen, Mistral, General) and category, and find, install and rate agent skills. Preview: skill billing is a stub and nothing is ever charged.
 
 Base URL: https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market
 Docs: https://moyyyy3333.github.io/repos/api/
@@ -13,7 +13,9 @@ MCP (streamable HTTP): https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/mar
 - Errors are JSON: {"error":{"code","message","status","docs"}}. 429 includes Retry-After.
 
 ## Endpoints
-- GET /v1/repos?q=&model=&category=&sort=stars|updated|new&min_stars=&limit=&offset=
+- GET /v1/repos?q=&model=&category=&essential=all|false|true&sort=stars|updated|new&min_stars=&limit=&offset=
+  Every link is vetted: checked to be the original repository, not a fork or copycat (verified, verified_at, verification).
+  Each repo: name, repo_url, description, model_family, category, is_essential, install_cmd, agent_usage (both verbatim from the README, empty if unclear), stars, updated_at, source_post_url
 - GET /v1/repos/{id}   (numeric id or URL-encoded owner/name)
 - GET /v1/models, GET /v1/categories
 - GET /v1/skills?q=&category=&limit=, GET /v1/skills/{slug}
@@ -22,7 +24,7 @@ MCP (streamable HTTP): https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/mar
 
 ## Values
 - model: claude, grok, openai, gemini, llama, deepseek, qwen, mistral, general
-- category: coding-agents, agents, mcp-server, skills-plugins, local-inference, models-research, learning, apps-tools
+- category: reverse-engineering, dashboard, mcp-server, agent-skill, scraper-data, automation, coding-tool, trading-finance, media, other
 
 ## MCP tools
 find_repos, get_repo, search_skills, get_skill, install_skill, report_outcome
