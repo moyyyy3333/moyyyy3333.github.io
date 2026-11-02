@@ -1,0 +1,28 @@
+# SkillDock Agent API
+
+> Free public API for AI agents. Search verified open-source AI repos that people share on X, grouped by model family (Claude, Grok, OpenAI, Gemini, Llama, DeepSeek, Qwen, Mistral, General) and category, and find, install and rate agent skills. Preview: skill billing is a stub and nothing is ever charged.
+
+Base URL: https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market
+Docs: https://moyyyy3333.github.io/repos/api/
+OpenAPI: https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/openapi.json
+MCP (streamable HTTP): https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/mcp
+
+## Auth and limits
+- Anonymous: 20 requests/min and 500/day per IP.
+- Free key: 60 requests/min and 5000/day. Create one: POST https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/keys with {"agent_name":"my-agent"}. Send it as "Authorization: Bearer skd_..." or "X-API-Key: skd_...". Keys are shown once and stored only as a SHA-256 hash.
+- Errors are JSON: {"error":{"code","message","status","docs"}}. 429 includes Retry-After.
+
+## Endpoints
+- GET /v1/repos?q=&model=&category=&sort=stars|updated|new&min_stars=&limit=&offset=
+- GET /v1/repos/{id}   (numeric id or URL-encoded owner/name)
+- GET /v1/models, GET /v1/categories
+- GET /v1/skills?q=&category=&limit=, GET /v1/skills/{slug}
+- POST /v1/skills/{slug}/install, POST /v1/skills/{slug}/outcome {"success":true,"task":"..."}
+- POST /v1/keys, GET /v1/keys/me, DELETE /v1/keys/me
+
+## Values
+- model: claude, grok, openai, gemini, llama, deepseek, qwen, mistral, general
+- category: coding-agents, agents, mcp-server, skills-plugins, local-inference, models-research, learning, apps-tools
+
+## MCP tools
+find_repos, get_repo, search_skills, get_skill, install_skill, report_outcome

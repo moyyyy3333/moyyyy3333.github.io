@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkillDock Agent API: free AI repos + skills API for agents</title>
+<meta name="description" content="Free public REST + MCP API for AI agents: search verified open-source AI repos by model family and category, and find, install and rate agent skills.">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<style>
+:root{--bg:#0b0d10;--card:#14181d;--line:#252b33;--fg:#e8ecf1;--mut:#9aa4b1;--acc:#ff7a45}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc)}.wrap{max-width:900px;margin:0 auto;padding:0 20px}header{border-bottom:1px solid var(--line)}header .wrap{display:flex;align-items:center;height:60px;gap:14px}
+.logo{font-weight:800;font-size:18px;text-decoration:none;color:var(--fg)}.logo span{color:var(--acc)}.badge{font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+nav a{color:var(--mut);text-decoration:none;margin-left:12px}h1{font-size:38px;line-height:1.1;margin:36px 0 10px;letter-spacing:-.03em}h2{margin:34px 0 8px;letter-spacing:-.02em}
+.lead{color:var(--mut)}pre{background:#080a0c;border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;font-size:13px;line-height:1.45}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
+.k{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:0 6px;font-family:ui-monospace,monospace;font-size:13px}
+.note{border:1px solid #5a4a1a;background:#1d180b;color:#f3d98b;border-radius:10px;padding:10px 12px;font-size:13px}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:13px;padding:20px 0 40px;margin-top:40px}
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="../">Skill<span>Dock</span></a><span class="badge">Agent API v1 · preview</span><nav><a href="../">AI Repos</a><a href="https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/openapi.json">OpenAPI</a><a href="../llms.txt">llms.txt</a></nav></div></header>
+<main class="wrap">
+<h1>Agent API</h1>
+<p class="lead">A free REST and MCP API for AI agents. Search verified open-source AI repos people are sharing on X, by model family and category, and find, install and rate agent skills. No signup: call it anonymously, or create a free key in one request for higher limits.</p>
+
+<h2>Base URL</h2>
+<pre><code>https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market</code></pre>
+
+<h2>Limits</h2>
+<table><tr><th></th><th>Per minute</th><th>Per day</th></tr>
+<tr><td>Anonymous (per IP)</td><td>20</td><td>500</td></tr>
+<tr><td>Free API key</td><td>60</td><td>5,000</td></tr>
+<tr><td>New keys (per IP)</td><td>3</td><td>5</td></tr></table>
+<p class="lead">Every response carries <span class="k">x-ratelimit-limit</span>, <span class="k">x-ratelimit-remaining</span>, <span class="k">x-ratelimit-reset</span> and the <span class="k">x-ratelimit-day-*</span> pair. A 429 includes <span class="k">Retry-After</span>.</p>
+
+<h2>Quick start</h2>
+<pre><code># 1. Search repos (no key needed)
+curl "https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/repos?model=claude&amp;category=coding-agents&amp;limit=5"
+
+# 2. Create a free key (shown once; stored only as a SHA-256 hash)
+curl -X POST https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/keys \
+  -H "content-type: application/json" \
+  -d '{"agent_name":"my-agent","contact":"me@example.com"}'
+
+# 3. Use it
+curl -H "Authorization: Bearer skd_YOUR_KEY" \
+  "https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/repos?q=mcp%20server&amp;sort=updated"</code></pre>
+
+<h2>Endpoints</h2>
+<table>
+<tr><th>Method</th><th>Path</th><th>What it does</th></tr>
+<tr><td>GET</td><td><code>/v1/repos</code></td><td>Search repos. Params: <code>q</code>, <code>model</code>, <code>category</code>, <code>sort</code> (stars | updated | new), <code>min_stars</code>, <code>limit</code> (≤100), <code>offset</code></td></tr>
+<tr><td>GET</td><td><code>/v1/repos/{id}</code></td><td>One repo by numeric id or URL-encoded <code>owner%2Fname</code></td></tr>
+<tr><td>GET</td><td><code>/v1/models</code>, <code>/v1/categories</code></td><td>Allowed values with repo counts</td></tr>
+<tr><td>GET</td><td><code>/v1/skills</code>, <code>/v1/skills/{slug}</code></td><td>Search skills / skill detail (rating from real agent outcomes)</td></tr>
+<tr><td>POST</td><td><code>/v1/skills/{slug}/install</code></td><td>Install config (MCP URL or npx command, ready-made JSON)</td></tr>
+<tr><td>POST</td><td><code>/v1/skills/{slug}/outcome</code></td><td>Report <code>{"success":true,"task":"..."}</code> after using a skill</td></tr>
+<tr><td>POST</td><td><code>/v1/keys</code></td><td>Create a free key: <code>{"agent_name":"..."}</code></td></tr>
+<tr><td>GET / DELETE</td><td><code>/v1/keys/me</code></td><td>Inspect or revoke the calling key</td></tr>
+<tr><td>POST</td><td><code>/v1/mcp</code></td><td>MCP server (streamable HTTP)</td></tr>
+<tr><td>GET</td><td><code>/v1/openapi.json</code>, <code>/llms.txt</code></td><td>Machine-readable docs</td></tr>
+</table>
+<p class="lead"><b>model:</b> claude, grok, openai, gemini, llama, deepseek, qwen, mistral, general<br>
+<b>category:</b> coding-agents, agents, mcp-server, skills-plugins, local-inference, models-research, learning, apps-tools</p>
+
+<h2>Errors</h2>
+<pre><code>{ "error": { "code": "rate_limited", "message": "limit of 60 requests per minute reached",
+             "status": 429, "retry_after_seconds": 12, "docs": "https://moyyyy3333.github.io/repos/api/" } }</code></pre>
+<p class="lead">Codes: <code>bad_request</code>, <code>invalid_parameter</code>, <code>invalid_api_key</code>, <code>not_found</code>, <code>method_not_allowed</code>, <code>rate_limited</code>, <code>internal_error</code>.</p>
+
+<h2>MCP</h2>
+<p class="lead">Tools: <code>find_repos</code>, <code>get_repo</code>, <code>search_skills</code>, <code>get_skill</code>, <code>install_skill</code>, <code>report_outcome</code>. The key is optional (anonymous limits apply without it).</p>
+<pre><code>// Cursor (.cursor/mcp.json), Claude Desktop and most clients
+{
+  "mcpServers": {
+    "skilldock": {
+      "url": "https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/mcp",
+      "headers": { "Authorization": "Bearer skd_YOUR_KEY" }
+    }
+  }
+}</code></pre>
+<pre><code># Claude Code
+claude mcp add --transport http skilldock \
+  https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/mcp \
+  --header "Authorization: Bearer skd_YOUR_KEY"</code></pre>
+<pre><code># Raw JSON-RPC
+curl -X POST https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/mcp \
+  -H "content-type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"find_repos","arguments":{"model":"grok","limit":3}}}'</code></pre>
+
+<h2>JavaScript</h2>
+<pre><code>const r = await fetch("https://xccrdgapkalcgzuvypdg.supabase.co/functions/v1/market/v1/repos?model=deepseek&amp;limit=5",
+  { headers: { Authorization: "Bearer " + process.env.SKILLDOCK_KEY } });
+const { data } = await r.json();
+data.forEach(x =&gt; console.log(x.stars, x.name, x.repo_url));</code></pre>
+
+<div class="note" style="margin-top:24px">Preview. Skill pay-per-use billing is a stub: nothing is ever charged. Repo descriptions are summaries of each project's README; check a repo before running it. Keys may be revoked for abuse.</div>
+</main>
+<footer><div class="wrap">SkillDock (working name) · <a href="../">AI Repos directory</a></div></footer>
+</body></html>
