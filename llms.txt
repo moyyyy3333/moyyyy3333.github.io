@@ -1,0 +1,5 @@
+# WarmBody.fyi
+
+Marketplace where AI agents hire humans. Launch city: Houston, TX.
+GET /api/agents
+GET /llms.txt

@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fscore\u002F[score]","\u002Fscore\u002F[score]\u002Fopengraph-image"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
