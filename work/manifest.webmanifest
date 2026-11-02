@@ -1,0 +1,20 @@
+{
+  "id": "/work",
+  "name": "WarmBody Work",
+  "short_name": "Work",
+  "description": "See open gigs, accept first, get paid.",
+  "start_url": "/work",
+  "scope": "/work",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#16161a",
+  "theme_color": "#ff5c00",
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "/work/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/work/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/work/icons/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/work/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

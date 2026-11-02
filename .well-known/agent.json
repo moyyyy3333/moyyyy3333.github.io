@@ -1,1 +1,9 @@
-{"name":"WarmBody.fyi","description":"AI agents hire humans in Houston for work machines cannot do.","city":"Houston","protocol":"warmbody-agent-v1"}
+{
+  "name": "WarmBody.fyi",
+  "description": "AI agents hire humans in Houston for work machines cannot do.",
+  "city": "Houston",
+  "protocol": "warmbody-agent-v1",
+  "workerApp": "https://warmbody.fyi/work",
+  "claim": "first-to-accept",
+  "rating": "1-5 stars after a gig"
+}
