@@ -1,0 +1,138 @@
+{
+ "generated": "2026-11-02T12:28:38-06:00",
+ "projects": [
+  {
+   "name": "Skills Marketplace + AI Repos",
+   "percent": 56,
+   "done": [
+    "Supabase backend and Agent API live",
+    "MCP endpoint live",
+    "AI Repos directory live (347 verified repos)",
+    "API docs, OpenAPI and llms.txt published",
+    "Autopilot backend (edge function + worker)"
+   ],
+   "todo": [
+    "Deploy marketplace web app (blocked: Vercel invoice unpaid)",
+    "Set Supabase Auth site URL for Autopilot after deploy",
+    "Fill thin sections (reverse-engineering, trading tools)",
+    "List real skills beyond WarmBody (others are demos)"
+   ],
+   "dashboard": "/dashboards/marketplace/"
+  },
+  {
+   "name": "X Promoter",
+   "percent": 57,
+   "done": [
+    "Client intake template",
+    "7 project lanes seeded",
+    "Offer and packages drafted",
+    "Dashboard"
+   ],
+   "todo": [
+    "Set package prices in OFFER.md",
+    "Sign first client",
+    "Name X handles for project lanes"
+   ],
+   "dashboard": "/dashboards/x-promoter/"
+  },
+  {
+   "name": "WarmBody",
+   "percent": 50,
+   "done": [
+    "Free GitHub Pages copy live",
+    "Rebuilt from production commit",
+    "Public agents/jobs snapshot published"
+   ],
+   "todo": [
+    "Move warmbody.fyi DNS to GitHub Pages (needs the Cloudflare account that owns the domain)",
+    "Set custom domain on GitHub Pages",
+    "Pay Vercel invoice to restore the full app (gigs, escrow)"
+   ],
+   "dashboard": "/dashboards/warmbody/"
+  },
+  {
+   "name": "Future Capital",
+   "percent": 67,
+   "done": [
+    "Render + upload pipeline built",
+    "7 long-form guides uploaded",
+    "24 Shorts uploaded",
+    "6 playlists created"
+   ],
+   "todo": [
+    "Upload rendered video: capital-gains-tax-explained",
+    "Upload rendered video: index-funds-beat-pros"
+   ],
+   "dashboard": "/dashboards/future-capital/"
+  },
+  {
+   "name": "Honk n Haul",
+   "percent": 33,
+   "done": [
+    "Brand, mascot and workflow",
+    "Upload pipeline + daily routine",
+    "30 videos uploaded"
+   ],
+   "todo": [
+    "Upload 31-compilation-1h-20261029",
+    "Upload 32-truck-of-the-day-dump-truck",
+    "Upload 33-whats-inside-tow-truck",
+    "Upload 34-whats-inside-excavator",
+    "Upload 35-truck-of-the-day-cement-mixer",
+    "Organize playlists"
+   ],
+   "dashboard": "/dashboards/honk-n-haul/"
+  },
+  {
+   "name": "Paper Trading (trading intel)",
+   "percent": 57,
+   "done": [
+    "Kraken paper bots running",
+    "3 sim bots built (trend, mean-reversion, breakout)",
+    "Kraken-Coinbase spread feed",
+    "Daily scorecard routine"
+   ],
+   "todo": [
+    "Review paused kr_250 (Donchian)",
+    "Reach 30+ trades before any verdict",
+    "Find a strategy that beats fees (none proven yet)"
+   ],
+   "dashboard": "/dashboards/paper-trading/"
+  },
+  {
+   "name": "X Desk",
+   "percent": 75,
+   "done": [
+    "Watchlist across 4 topic lanes",
+    "Daily digest routine",
+    "7 digests written"
+   ],
+   "todo": [
+    "Add more active build-in-public accounts (lane is thin)"
+   ],
+   "dashboard": "/dashboards/x-desk/"
+  },
+  {
+   "name": "The Staking Desk",
+   "percent": 23,
+   "done": [
+    "Identity/brief/plan",
+    "Brand assets",
+    "First videos rendered and queued"
+   ],
+   "todo": [
+    "Channel created (Matthew)",
+    "Handle claimed",
+    "Avatar/banner uploaded",
+    "YouTube upload authorization",
+    "Channel id in config",
+    "Upload routine saved",
+    "Upload 01-weekly-staking-rate-update-1",
+    "Upload 01-weekly-staking-rate-update-1-short-1",
+    "Upload 02-staking-real-yield-vs-inflation",
+    "Upload 02-staking-real-yield-vs-inflation-short-2"
+   ],
+   "dashboard": "/dashboards/staking-desk/"
+  }
+ ]
+}

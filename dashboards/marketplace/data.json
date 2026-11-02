@@ -1,0 +1,85 @@
+{
+ "snapshot": "2026-11-02T12:28:38-06:00",
+ "repos_total": 347,
+ "verified": 347,
+ "essentials": 155,
+ "models": [
+  {
+   "id": "claude",
+   "label": "Claude (Anthropic)",
+   "repos": 65,
+   "small_tools": 37,
+   "essentials": 28
+  },
+  {
+   "id": "grok",
+   "label": "Grok (xAI)",
+   "repos": 11,
+   "small_tools": 6,
+   "essentials": 5
+  },
+  {
+   "id": "openai",
+   "label": "ChatGPT / Codex (OpenAI)",
+   "repos": 32,
+   "small_tools": 18,
+   "essentials": 14
+  },
+  {
+   "id": "gemini",
+   "label": "Gemini (Google)",
+   "repos": 11,
+   "small_tools": 2,
+   "essentials": 9
+  },
+  {
+   "id": "llama",
+   "label": "Llama (Meta) & local models",
+   "repos": 26,
+   "small_tools": 15,
+   "essentials": 11
+  },
+  {
+   "id": "deepseek",
+   "label": "DeepSeek",
+   "repos": 13,
+   "small_tools": 8,
+   "essentials": 5
+  },
+  {
+   "id": "qwen",
+   "label": "Qwen",
+   "repos": 8,
+   "small_tools": 3,
+   "essentials": 5
+  },
+  {
+   "id": "mistral",
+   "label": "Mistral",
+   "repos": 3,
+   "small_tools": 1,
+   "essentials": 2
+  },
+  {
+   "id": "general",
+   "label": "General / multi-model",
+   "repos": 178,
+   "small_tools": 102,
+   "essentials": 76
+  }
+ ],
+ "categories": [],
+ "skills": [],
+ "endpoints": {
+  "": "429",
+  "/repos?limit=1": "429",
+  "/models": "429",
+  "/categories": "429",
+  "/skills": "429",
+  "/openapi.json": "200"
+ },
+ "pages": {
+  "/repos/": "200",
+  "/repos/api/": "200"
+ }
+}

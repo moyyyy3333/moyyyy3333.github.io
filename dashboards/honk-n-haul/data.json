@@ -1,0 +1,165 @@
+{
+ "snapshot": "2026-11-02T12:28:38-06:00",
+ "uploaded": 30,
+ "ready_folders": 35,
+ "waiting": [
+  "31-compilation-1h-20261029",
+  "32-truck-of-the-day-dump-truck",
+  "33-whats-inside-tow-truck",
+  "34-whats-inside-excavator",
+  "35-truck-of-the-day-cement-mixer"
+ ],
+ "last_upload": "2026-10-30T23:58:40-05:00",
+ "videos": [
+  {
+   "key": "excavator",
+   "url": "https://youtu.be/T1r0QP7ZGrs",
+   "time": "2026-10-15T23:38:38-05:00"
+  },
+  {
+   "key": "dump-truck",
+   "url": "https://youtu.be/bFaeQrUTI8s",
+   "time": "2026-10-15T23:38:49-05:00"
+  },
+  {
+   "key": "cement-mixer",
+   "url": "https://youtu.be/zky_B1Fbgaw",
+   "time": "2026-10-15T23:39:01-05:00"
+  },
+  {
+   "key": "fire-truck",
+   "url": "https://youtu.be/mpsShAXhuuA",
+   "time": "2026-10-15T23:39:11-05:00"
+  },
+  {
+   "key": "tractor",
+   "url": "https://youtu.be/YNx2VwMrIlk",
+   "time": "2026-10-15T23:39:26-05:00"
+  },
+  {
+   "key": "freight-train",
+   "url": "https://youtu.be/RPAgQ5UUnaQ",
+   "time": "2026-10-15T23:39:38-05:00"
+  },
+  {
+   "key": "garbage-truck",
+   "url": "https://youtu.be/d4dSyiXQDG8",
+   "time": "2026-10-17T00:01:09-05:00"
+  },
+  {
+   "key": "bulldozer",
+   "url": "https://youtu.be/rEW9Wkn58s0",
+   "time": "2026-10-17T00:01:17-05:00"
+  },
+  {
+   "key": "tow-truck",
+   "url": "https://youtu.be/kq4NWsiLxmU",
+   "time": "2026-10-17T23:54:53-05:00"
+  },
+  {
+   "key": "compilation-30min",
+   "url": "https://youtu.be/NkVJ34DOe8E",
+   "time": "2026-10-17T23:55:41-05:00"
+  },
+  {
+   "key": "compilation-1h-20261016",
+   "url": "https://youtu.be/2AOhAeMKMGc",
+   "time": "2026-10-19T00:03:09-05:00"
+  },
+  {
+   "key": "crane",
+   "url": "https://youtu.be/InBXQgY4bWM",
+   "time": "2026-10-19T00:03:15-05:00"
+  },
+  {
+   "key": "truck-colors",
+   "url": "https://youtu.be/LPNcsYRqMcQ",
+   "time": "2026-10-19T23:59:10-05:00"
+  },
+  {
+   "key": "whats-inside-cement-mixer",
+   "url": "https://youtu.be/IFNH5nXJYpM",
+   "time": "2026-10-19T23:59:18-05:00"
+  },
+  {
+   "key": "compilation-1h-20261019",
+   "url": "https://youtu.be/6lde99xskjY",
+   "time": "2026-10-21T00:00:36-05:00"
+  },
+  {
+   "key": "letter-d-dump-truck",
+   "url": "https://youtu.be/6oio1DRiqTI",
+   "time": "2026-10-21T00:00:50-05:00"
+  },
+  {
+   "key": "letter-e-excavator",
+   "url": "https://youtu.be/ZDNiy7DWrNg",
+   "time": "2026-10-21T23:52:56-05:00"
+  },
+  {
+   "key": "truck-of-the-day-fire-truck",
+   "url": "https://youtu.be/zoDQuKwkeXE",
+   "time": "2026-10-21T23:53:06-05:00"
+  },
+  {
+   "key": "letter-b-bulldozer",
+   "url": "https://youtu.be/WUAsyUAULws",
+   "time": "2026-10-24T08:36:09-05:00"
+  },
+  {
+   "key": "truck-of-the-day-tractor",
+   "url": "https://youtu.be/bZicWmUoFlQ",
+   "time": "2026-10-25T11:00:07-05:00"
+  },
+  {
+   "key": "letter-t-tow-truck",
+   "url": "https://youtu.be/nUW3TpYhyCg",
+   "time": "2026-10-26T23:57:54-05:00"
+  },
+  {
+   "key": "whats-inside-dump-truck",
+   "url": "https://youtu.be/-DhlU5OJr0A",
+   "time": "2026-10-26T23:58:02-05:00"
+  },
+  {
+   "key": "compilation-2h-20261026",
+   "url": "https://youtu.be/3OGmfElu9oc",
+   "time": "2026-10-28T00:01:11-05:00"
+  },
+  {
+   "key": "letter-c-crane",
+   "url": "https://youtu.be/g6p0CvIUwvc",
+   "time": "2026-10-28T00:10:01-05:00"
+  },
+  {
+   "key": "truck-of-the-day-excavator",
+   "url": "https://youtu.be/-nNsE46g1qc",
+   "time": "2026-10-28T23:57:07-05:00"
+  },
+  {
+   "key": "whats-inside-fire-truck",
+   "url": "https://youtu.be/Y1cFh97CuBM",
+   "time": "2026-10-28T23:57:13-05:00"
+  },
+  {
+   "key": "letter-m-cement-mixer",
+   "url": "https://youtu.be/XAh1zQeemOk",
+   "time": "2026-10-29T23:57:54-05:00"
+  },
+  {
+   "key": "truck-of-the-day-bulldozer",
+   "url": "https://youtu.be/icbS9gIlfwg",
+   "time": "2026-10-29T23:58:02-05:00"
+  },
+  {
+   "key": "letter-f-fire-truck",
+   "url": "https://youtu.be/Zs5gszHRHx0",
+   "time": "2026-10-30T23:58:29-05:00"
+  },
+  {
+   "key": "truck-of-the-day-tow-truck",
+   "url": "https://youtu.be/p0dUKnTce04",
+   "time": "2026-10-30T23:58:40-05:00"
+  }
+ ]
+}

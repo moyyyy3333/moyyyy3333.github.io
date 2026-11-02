@@ -1,0 +1,179 @@
+{
+ "snapshot": "2026-11-02T12:28:38-06:00",
+ "uploaded": 31,
+ "long_form": 7,
+ "shorts": 24,
+ "playlists": [
+  "Money Basics | Future Capital",
+  "All Future Capital Guides",
+  "Future Capital Shorts: 60-Second Money Lessons",
+  "Investing Basics for Beginners | Future Capital",
+  "Retirement Accounts Explained | Future Capital",
+  "Taxes Explained | Future Capital"
+ ],
+ "rendered_not_uploaded": [
+  "capital-gains-tax-explained",
+  "index-funds-beat-pros"
+ ],
+ "upload_errors": {
+  "upload limit reached": 3
+ },
+ "last_upload": "2026-10-19T05:10:56-05:00",
+ "videos": [
+  {
+   "key": "compound-interest",
+   "url": "https://youtu.be/acKgFRrWV8g",
+   "time": "2026-10-16T04:36:24-05:00"
+  },
+  {
+   "key": "roth-vs-traditional-ira",
+   "url": "https://youtu.be/u7dL7dpGR_E",
+   "time": "2026-10-16T04:41:19-05:00"
+  },
+  {
+   "key": "index-funds",
+   "url": "https://youtu.be/XEFFLQzKYJw",
+   "time": "2026-10-16T04:41:26-05:00"
+  },
+  {
+   "key": "compound-interest-short-3",
+   "url": "https://youtu.be/H4VgEm_WT4M",
+   "time": "2026-10-16T04:41:28-05:00"
+  },
+  {
+   "key": "compound-interest-short-4",
+   "url": "https://youtu.be/ZWj64tmdJIU",
+   "time": "2026-10-16T04:41:30-05:00"
+  },
+  {
+   "key": "roth-vs-traditional-ira-short-2",
+   "url": "https://youtu.be/neSAXnya2t8",
+   "time": "2026-10-16T04:41:32-05:00"
+  },
+  {
+   "key": "roth-vs-traditional-ira-short-5",
+   "url": "https://youtu.be/v90bN61EFrQ",
+   "time": "2026-10-16T04:41:33-05:00"
+  },
+  {
+   "key": "index-funds-short-3",
+   "url": "https://youtu.be/rQuJbg2W5cA",
+   "time": "2026-10-16T04:41:34-05:00"
+  },
+  {
+   "key": "index-funds-short-4",
+   "url": "https://youtu.be/AtAiby3Q8h8",
+   "time": "2026-10-16T04:41:36-05:00"
+  },
+  {
+   "key": "compound-interest-short-1",
+   "url": "https://youtu.be/JRrjB1F8zHM",
+   "time": "2026-10-16T04:42:39-05:00"
+  },
+  {
+   "key": "401k-explained",
+   "url": "https://youtu.be/s3Ut2cnTaoU",
+   "time": "2026-10-17T05:04:55-05:00"
+  },
+  {
+   "key": "401k-explained-short-3",
+   "url": "https://youtu.be/4jTLY2O4HYg",
+   "time": "2026-10-17T05:04:58-05:00"
+  },
+  {
+   "key": "401k-explained-short-4",
+   "url": "https://youtu.be/H-kHDmrFVtE",
+   "time": "2026-10-17T05:05:00-05:00"
+  },
+  {
+   "key": "401k-explained-short-6",
+   "url": "https://youtu.be/AQJgJ45c-HU",
+   "time": "2026-10-17T05:05:01-05:00"
+  },
+  {
+   "key": "401k-explained-short-8",
+   "url": "https://youtu.be/IHKY8UiVNvg",
+   "time": "2026-10-17T05:05:03-05:00"
+  },
+  {
+   "key": "credit-score-explained",
+   "url": "https://youtu.be/Et5mneAFeXg",
+   "time": "2026-10-17T05:07:23-05:00"
+  },
+  {
+   "key": "credit-score-explained-short-4",
+   "url": "https://youtu.be/apCYsKFbFqM",
+   "time": "2026-10-17T05:07:26-05:00"
+  },
+  {
+   "key": "credit-score-explained-short-5",
+   "url": "https://youtu.be/zEqISsXo-GA",
+   "time": "2026-10-17T05:07:28-05:00"
+  },
+  {
+   "key": "credit-score-explained-short-7",
+   "url": "https://youtu.be/5ybhD-sp3fc",
+   "time": "2026-10-17T05:07:30-05:00"
+  },
+  {
+   "key": "credit-score-explained-short-8",
+   "url": "https://youtu.be/WOxOtjsGe84",
+   "time": "2026-10-17T05:07:33-05:00"
+  },
+  {
+   "key": "compound-interest-short-7",
+   "url": "https://youtu.be/tHspb1G_qv8",
+   "time": "2026-10-18T05:01:49-05:00"
+  },
+  {
+   "key": "tax-brackets-explained",
+   "url": "https://youtu.be/S_YShqXEMMk",
+   "time": "2026-10-18T05:07:55-05:00"
+  },
+  {
+   "key": "tax-brackets-explained-short-2",
+   "url": "https://youtu.be/rdMT6vsbAs4",
+   "time": "2026-10-18T05:07:58-05:00"
+  },
+  {
+   "key": "tax-brackets-explained-short-5",
+   "url": "https://youtu.be/Wx6ldvYjlLM",
+   "time": "2026-10-18T05:08:00-05:00"
+  },
+  {
+   "key": "tax-brackets-explained-short-6",
+   "url": "https://youtu.be/tW28YO4aUgg",
+   "time": "2026-10-18T05:08:02-05:00"
+  },
+  {
+   "key": "tax-brackets-explained-short-7",
+   "url": "https://youtu.be/zqS7gAKGTZo",
+   "time": "2026-10-18T05:08:04-05:00"
+  },
+  {
+   "key": "hsa-explained",
+   "url": "https://youtu.be/d-Vq_SkJCrU",
+   "time": "2026-10-19T05:10:47-05:00"
+  },
+  {
+   "key": "hsa-explained-short-2",
+   "url": "https://youtu.be/_amdGGj6upU",
+   "time": "2026-10-19T05:10:49-05:00"
+  },
+  {
+   "key": "hsa-explained-short-4",
+   "url": "https://youtu.be/d-JxH6lbPCI",
+   "time": "2026-10-19T05:10:52-05:00"
+  },
+  {
+   "key": "hsa-explained-short-5",
+   "url": "https://youtu.be/t1x9npBB0_A",
+   "time": "2026-10-19T05:10:54-05:00"
+  },
+  {
+   "key": "hsa-explained-short-9",
+   "url": "https://youtu.be/jf-t9BtxWds",
+   "time": "2026-10-19T05:10:56-05:00"
+  }
+ ]
+}

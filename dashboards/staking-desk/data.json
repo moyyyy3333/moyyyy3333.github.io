@@ -1,0 +1,45 @@
+{
+ "snapshot": "2026-11-02T12:28:38-06:00",
+ "setup_steps": [
+  {
+   "step": "Identity/brief/plan",
+   "status": "done"
+  },
+  {
+   "step": "Brand assets",
+   "status": "made"
+  },
+  {
+   "step": "Channel created (Matthew)",
+   "status": "pending"
+  },
+  {
+   "step": "Handle claimed",
+   "status": "pending"
+  },
+  {
+   "step": "Avatar/banner uploaded",
+   "status": "pending"
+  },
+  {
+   "step": "YouTube upload authorization",
+   "status": "pending"
+  },
+  {
+   "step": "Channel id in config",
+   "status": "pending"
+  },
+  {
+   "step": "Upload routine saved",
+   "status": "pending"
+  }
+ ],
+ "queued_videos": [
+  "01-weekly-staking-rate-update-1",
+  "01-weekly-staking-rate-update-1-short-1",
+  "02-staking-real-yield-vs-inflation",
+  "02-staking-real-yield-vs-inflation-short-2"
+ ],
+ "uploaded": 0,
+ "upload_errors": 2
+}

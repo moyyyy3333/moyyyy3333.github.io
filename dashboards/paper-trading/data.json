@@ -1,0 +1,84 @@
+{
+ "snapshot": "2026-11-02T12:28:38-06:00",
+ "paper_only": true,
+ "kraken_paper_bots": [
+  {
+   "name": "kr_200",
+   "strategy": "EmaRsi_variantA",
+   "state": "RUNNING",
+   "balance": 205.71,
+   "closed": 6,
+   "open": 0,
+   "updated": "2026-11-02T12:28:44"
+  },
+  {
+   "name": "kr_250",
+   "strategy": "S2_Donchian55",
+   "state": "PAUSED",
+   "balance": 208.47,
+   "closed": 4,
+   "open": 0,
+   "updated": "2026-10-28T09:43:29"
+  },
+  {
+   "name": "kr_A",
+   "strategy": "EmaRsi_variantA",
+   "state": "RUNNING",
+   "balance": 44.7,
+   "closed": 4,
+   "open": 0,
+   "updated": "2026-11-02T12:28:42"
+  }
+ ],
+ "sim_bots_venue_fees": [
+  {
+   "strategy": "trend_stop",
+   "venue": "kraken",
+   "fees": "venue",
+   "trades": "0",
+   "win_pct": "0.0",
+   "net": "0.0"
+  },
+  {
+   "strategy": "trend_stop",
+   "venue": "coinbase",
+   "fees": "venue",
+   "trades": "0",
+   "win_pct": "0.0",
+   "net": "0.0"
+  },
+  {
+   "strategy": "mean_reversion",
+   "venue": "kraken",
+   "fees": "venue",
+   "trades": "5",
+   "win_pct": "20.0",
+   "net": "-36.77"
+  },
+  {
+   "strategy": "mean_reversion",
+   "venue": "coinbase",
+   "fees": "venue",
+   "trades": "3",
+   "win_pct": "33.3",
+   "net": "-41.81"
+  },
+  {
+   "strategy": "breakout",
+   "venue": "kraken",
+   "fees": "venue",
+   "trades": "5",
+   "win_pct": "0.0",
+   "net": "-28.12"
+  },
+  {
+   "strategy": "breakout",
+   "venue": "coinbase",
+   "fees": "venue",
+   "trades": "3",
+   "win_pct": "0.0",
+   "net": "-33.59"
+  }
+ ],
+ "scorecard_updated": "2026-11-02 12:01 America/Chicago "
+}
